@@ -16,15 +16,13 @@
 	<body>
 		<div class="reveal">
 			<a class="slides">
-
 				<section>
 					<h1>TAS Value Narrative</h1>
 				</section>
-
 				<section>
 					<section>
 						<p>Question: What does it cost to change one line of code running in your enterprise today?</p>
-						<p><h6>&#187;... why change?</h6></p>
+						<p>↓ Why change ↓</p>
 				 	</section>
 				 	<section>
 						<p>Reasons to "change one line of code"</p>
@@ -38,46 +36,87 @@
 			    </section>
 
 				<section>
-					Question: How often do you aspirationally want to "change one line of code"?
+					<section>
+						<p>Question: How often do you aspirationally want to "change one line of code"?</p>
+						<p>↓ Factors to consider↓</p>
+					</section>
+					<section>
+						<p>Determining 'rate of change' for running application realestate</p>
+						<p style="text-align: left;" class="fragment">Reasons to go faster</p>
+							<ul style="text-align: left;">
+								<li class="fragment">Deliver new business value</li>
+								<li class="fragment">Improve security posture</li>
+							</ul>
+						<p style="text-align: left;" class="fragment">Reasons to moderate change velocity</p>
+							<ul >
+								<li class="fragment">Risk of change - Insufficient testing</li>
+								<li class="fragment">Cost of change - Insufficient automation</li>
+								<li class="fragment">Impact of change - Downtime required</li>
+							</ul>
+					</section>
 				</section>
 
 				<section>
-					Question: Who developes, sources, tess, certifies that new 'line of code'?
+					Question: Who develops, sources, tests, certifies that new 'line of code'?
 				</section>
 
 				<section>
 					<section>
 						<p>Question: What are "Modern Applications"</p>
-						<p class="fragment">Question: Whare are we creating this new generational category?</p>
+						<p class="fragment">↓ & why we creating this new generational category? ↓</p>
 					</section>
 					<section>
-						<p class="fragment">"Modern Applications" are engineered to be easier to develop, test, deploy and update without introducing additional risk to existing systems</p>
+						<p>"Modern Applications" are engineered to be easier to develop, test, deploy and update without introducing additional risk to existing systems</p>
 					</section>
 				</section>
 
-				<section>So what does TAS do differently to support 'modern application' better than any other substrate?</section>
 				<section>
-						<p>The Power of Abstractions</p>
-						<p class="fragment">An abstraction is a 'hidden, reused automation' that simplifies the underlying resource</p>
-						<p class="fragment">What was the fundamental 'abstraction' that TAS provided?</p>
-						<section>
-							<p class="fragment">but isn't TAS just a kubernetes technology precursor?</p>
-
-						</section>
-						<section>
-							<p>History Lesson</p>
-							<p>Abstraction vs Virtualization</p>
-							<p class="fragment">A 'virtual' something should look exactly like the 'something'..</p>
-							<p class="fragment">A 'virtual machine' looks just like a real server</p>
-							<p class="fragment">A 'container' looks just like a virtual-machine / real-server</p>
-
-							<p class="fragement">But an 'abstraction' changes things... </p>
-							<p class="fragment"></p>
-							<p class="fragment">Cloud Foundry vs Kubernetes aka PaaS vs CaaS</p>
-						</section>
-				</section>	
+					<p>"Modern Application" aliases</p>
+					<p class="fragment">Cloud Native application</p>
+					<p class="fragment">Micro service based application</p>
+					<p class="fragment">Serverless application</p>
+					<p class="fragment">Digital application</p>
 				</section>
 
+				<section>
+					<p>A "modern application" is typically a distributed system, engineered to run on an infrastructure abstraction that facilitates simplifed lifecyle management</p>
+				</section>
+
+				<section>
+					<p>So if 'automation' is critical, what's the catch?</p>
+					<p class="fragment">How much does building <em>and maintaining</em> the automations themselves cost?</p>
+					<p class="fragment">This is why we need the right ABSTRACTIONS</p>
+					<p class="fragment">Abstractions = <em>hidden, reused</em> automations</p>
+				</section>
+
+				<section>
+					<p>The Power of Abstractions</p>
+					<p class="fragment">An abstraction is a 'hidden, reused automation' that simplifies the underlying resource</p>
+					<p class="fragment">↓ History Lesson Time: Abstraction vs Virtualization ↓</p>
+					<section>
+						<p class="fragment">A 'virtual' something should look exactly like the 'something'..</p>
+						<p class="fragment">A 'virtual machine' looks just like a real server</p>
+						<p class="fragment">A 'container' looks just like a virtual-machine / real-server</p>
+						<hr/>
+						<p class="fragment">This means we have a 'full stack' to manage in VMs and Containers.. just like VMs</p>
+					</section>
+				</section>
+				<section>
+					<p><em>BUT</em> Platform / Serverless is a much higher-level abstraction</p>
+					<p class="fragment">The platform takes the code/application and just runs it</p>
+					<p class="fragment">Abstraction provided opinions vs 1000s of lines of configuration</p>
+				</section>
+				<section>
+					<p>Cloud Foundry vs Kubernetes aka PaaS vs CaaS</p>
+					<p class="fragment">Wasn't CF just an K8S precursor?</p>
+					<p class="fragment">K8S should easily replace all CF right?</p>
+					<p class="fragment"><em>NO!</em></p>
+					<p class="fragment">K8S is more of a successor to BOSH than CF!</p>
+				</section>
+						
+				<section>
+					<p>So what does TAS do differently to support 'modern application' better than any other substrate?</p>
+				</section>
 			</div>
 		</div>
 
