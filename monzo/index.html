@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Monzo Bank Modern Cloud Platform Story</title>
+
+		<link rel="stylesheet" href="../dist/reset.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<a class="slides">
+				<section>
+					<h2>Monzo Bank Modern Cloud Platform Story</h2>
+						<img src="software.jpg"/>
+				</section>
+				<section>
+					<p>About Monzo</p>
+					<p class="fragment">7 million customers</p>
+					<p class="fragment">2500+ microservices</p>
+					<p class="fragment">300+ application engineers</p>
+					<p class="fragment">100s of daily deployments</p>
+					<p class="fragment">25million+ metric samples</p>
+					<p class="fragment">100,000+ spans observed</p>
+				</section>
+				<section>
+					<p>Key to Monzo Success</p>
+					<p class="fragment">Microservices - enabling fast & frequent change</p>
+					<p class="fragment">Opinionated platform</p>
+					<p class="fragment">Strong developer support</p>
+					<p class="fragment">Substantial investment in observability</p>
+				</section>
+				<section>
+					<p>Separations / Boundaries</p>
+					<p class="fragment">Data domain strict boundaries - api only cross domain</p>
+					<p class="fragment">Separation of service from data - microservices on cassandra tenants</p>
+					<p class="fragment">Opinionated Platform infrastructure abstraction</p>
+				</section>
+				<section>
+					<p>Opinionated Platform</p>
+					<p class="fragment">Standardized build and deploy automation</p>
+					<p class="fragment">Docker build as a service and k8s manifests generators</p>
+					<p class="fragment">Platform provided libarires for;</p> 
+					<p class="fragment">HTTP server code</p>
+					<p class="fragment">Structured Data SOA with Protobuf interfaces</p>
+					<p class="fragment">metrics/logging/tracing</p>
+					<p class="fragment">data access logic</p>
+				</section>
+				<section>
+					<p>Observability</p>
+					<p class="fragment">Not cheap! but worth it!</p>
+					<p class="fragment">Auto-instrument all new services</p>
+					<p class="fragment">default dashboard</p>
+					<p class="fragment">default alerting</p>
+				</section>
+				<section>
+					<p>Failures</p>
+					<p class="fragment">Consistency service</p>
+					<p class="fragment">Semi-automate consistency issues via a service</p>
+				</section>
+				<section>
+					<p>Developer Experience</p>
+					<p class="fragment">Educate Dev's at Onboarding Phase</p>
+					<p class="fragment">Well documented standard build and deploy procedures</p>
+					<p class="fragment">support structure</p>
+					<p class="fragment">shared experiences</p>
+					<p class="fragment">implicit docs for all services</p>
+					<p class="fragment">static analysis checks for bad behavior</p>
+				</section>
+				<section>
+					<p>What can we Learn from this at Tanzu?</p>
+					<p class="fragment">K8s is too difficult / expensive for the app-engineers to use directly</p>
+					<p class="fragment">Developer Experience Support is key</p>
+					<p class="fragment">Observability by default</p>
+					<p class="fragment">We have so much to offer the next Monzo!</p>
+				</section>
+				<section>
+					<p>Tanzu for (the next) Monzo</p>
+					<p class="fragment">Development frameworks for RPC / event-driven / composite apps with Spring</p>
+					<p class="fragment">Modern app landscape management with AppEngine</p>
+					<p class="fragment">Build automation/abstraction with TAP</p>
+					<p class="fragment">Deploy abstraction with TAP</p>
+					<p class="fragment">Services catalog to offer dialtone database-as-a-service with observability baked in!</p>
+					<p class="fragment">Day2 support - fostering continous-upgrade culture</p>
+				</section>
+		</a>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/notes/notes.js"></script>
+		<script src="../plugin/markdown/markdown.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
