@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Tanzu Platform - PaaS Mode</title>
+
+		<link rel="stylesheet" href="../dist/reset.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<a class="slides">
+				<section>
+					<h1>Tanzu Platform - PaaS Mode</h1>
+					<p class="fragment">Demonstrating Tanzu Value Faster</p>
+				</section>
+				<section>
+					<p>I want an easy-button app deployment experience<blockquote>cf push</blockquote></p>
+					<p class="fragment">but I need backing services...</p>
+					<p class="fragment">Maybe I can 'project' TAP Class-Claims into cf spaces?</p>
+				</section>
+				<section>
+					<p>What services are available</p>
+					<p class="fragment"><blockquote>tanzu services classes list</blockquote></p>
+					<p class="fragment"><table><tr><td>postgres</td><td>mysql</td><td>rabbitmq</td><td>redis</td><td>kafka</td><td>mongo</td></td></tr></table></p>
+				</section>
+				<section>
+					<p>lets create a demo postgres db
+						<blockquote>tanzu services class-claim create pg1 --class postgresql-unmanaged</blockquote>
+					</p>
+					<p class="fragment">deploy app but let's not start it yet
+						<blockquote>cf push sm -p ./spring-music-1.0.jar --no-start</blockquote>
+					</p>
+				</section>
+				<section>
+					<p class="fragment"><blockquote>cf push</blockquote></p>
+				</section>
+				<section>
+					<p>Here's my compiled-code, run it on k8s for me, I don't care how... but i want a...</p>
+					<p class="fragment">'Button Click' app deployer</p>
+					<p class="fragment">'Batteries-included' services marketplace</p>
+					<p class="fragment">Application-instance log drain</p>	
+					<p class="fragment">Basic operational control start/stop/scale</p>
+				</section>	
+				<section>
+					<p class="fragment">Containerize the 'app' (e.g. jar)</p>
+					<p class="fragment">Deploy the image</p>
+					<p class="fragment">Bind services</p>
+					<p class="fragment">Set up ingress</p>
+				</section>
+				<section>
+					<p>cf push myapp myapp.jar --no-start</p>
+					<p class="fragment">cf bind-service myapp mydb</p>
+					<p class="fragment">cf start myapp</p>
+				</section>
+				<section>
+
+				</section>
+			</a>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/notes/notes.js"></script>
+		<script src="../plugin/markdown/markdown.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
