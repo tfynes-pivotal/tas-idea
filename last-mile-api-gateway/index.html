@@ -36,6 +36,11 @@
 					<p>Protecting our APIs from unauthorized requests </p>
 				</section>
 				<section>
+					<p>How can I integrate my 'system of engagement' application with 
+						my enterprise indentity provider?</p>
+					<p>e.g. "login with Okta"</p>
+				</section>
+				<section>
 					<p>oAuth - Send user to enterprise login service first!</p>
 					<img src="oauth1.jpg"/>
 					<p class="fragment">No need to manage user credentials</p>
@@ -53,13 +58,35 @@
 				<section>
 					<p>ATZ using SpringCloudGateway for mTLS client check</p>
 					<img src="intermediary2.jpg"/>
+					<p class="fragment">Assure traffic passes through system 
+						with specific certificate 'common-name'
+					</p>
 				</section>
+				<section>
 				<section>
 					<p>Confidentiality end-2-end in Tanzu Application Service</p>
 					<img src="e2e1.jpg"/>
 					<p class="fragment">Platform delivers 'transparent-TLS to container'</p>
 					<p class="fragment">Zero TLS requirements on platform tenant</p>
 				</section>	
+					<section>
+						<img src="xfcc1.jpg"/>
+					</section>
+					<section>
+						<p>Traditional 2-system mTLS Connectivity</p>
+						<img src="mtls1.jpg"/>
+					</section>
+					<section>
+						<p>mTLS Connectivity in TAS</p>
+						<img src="mtls2.jpg"/>
+						<p>Service has access to upstream client cert despite multiple hops</p>
+					</section>
+					<section>
+						<p>TAS with SpringCloudGateway</p>
+						<p>client cert based Authorization</p>
+						<img src="mtls3.jpg"/>
+					</section>
+				</section>
 			</a>
 		</div>
 
