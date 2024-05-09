@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Tanzu Platform - Protecting the 'last-mile'</title>
+
+		<link rel="stylesheet" href="../dist/reset.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<a class="slides">
+				<section>
+					<h1>Tanzu Platform</h1>
+					<p>Protecting the 'last-mile'</p>
+				</section>
+				<section>
+					<p>Modern Application "Connectivity" Security Concerns</p>
+					<img src="problem-domain.jpg"/>
+				</section>
+				<section>
+					<p>Slicing and dicing the 'connectivity' security challenge</p>
+					<p class="fragment">north-south vs east-west traffic</p>
+					<p class="fragment">system-sytem or user-system calls</p>
+					<p class="fragment">enforcing intermediary traversal</p>
+					<p class="fragment"><span style="text-decoration: underline;"><strong>Authentication & Authorization</strong></span></p>
+				</section>
+				<section>
+					<p>Solving for "Last Mile" security</p>
+					<img src="intermediary1.jpg"/>
+				</section>
+				<section>
+					<p>ATZ using SpringCloudGateway for mTLS client check</p>
+					<img src="intermediary2.jpg"/>
+				</section>
+				<section>
+					<p>oAuth - send user to enterprise login service first!</p>
+					<img src="oauth1.jpg"/>
+					<p class="fragment">No need to manage user credentials</p>
+				</section>
+			</a>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/notes/notes.js"></script>
+		<script src="../plugin/markdown/markdown.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
