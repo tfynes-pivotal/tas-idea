@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Tanzu Platform for Cloud Foundry - SuperPowers</title>
+
+		<link rel="stylesheet" href="../dist/reset.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<a class="slides">
+				<section>
+					<h2>tPCF - 'Unknown' SuperPowers</h2>
+				</section>
+				<section>
+					<p>tPCF is already the best place to run your spring applications</p>
+					<p class="fragment">but how/why is this the case?</p>
+					<p class="fragment">So how can we make it better?</p>
+					<p class="fragment">How can we demonstrate that we continue to innovate on tPCF?</p>
+					<p class="fragment">Can we use tPCF to showcase spring innovation?</p>
+					<p class="fragment">Can we 'remind' our customers of the 'cloud' experience 'cloud foundry' provides!</p>
+				</section>
+				<section>
+					<p>How's tPCF the best place to run your spring apps?</p>
+					<p class="fragment">2 hour install / 2 minute (dev) onboarding</p>
+					<p class="fragment">Runs on almost any vSphere version</p>
+					<p class="fragment">Converts vSphere into immutable infrastructure</p>
+					<p class="fragment">Multi-tenant with extremely effecient on-boarding</p>	
+					<p class="fragment">and we never need to 'reinstall'/ 'migrate' (for upgrades)</p>
+				</section>
+				<section>
+				<section>
+					<p>"Almost forgotten" inherent tPCF value</p>
+					<p class="fragment">tPCF 'includes' a 'service-mesh' provides turnkey transparent-mTLS to container</p>
+					<p class="fragment">...lots of 'batteries included'</p>
+				</section>
+					<section>
+						<p class="fragment">Batteries Included</p>
+						<p class="fragment">service mesh</p>
+						<p class="fragment">image registry</p>
+						<p class="fragment">container build system</p>
+						<p class="fragment">platform app-restacking / rebasing</p>
+						<p class="fragment">secrets vault</p>
+						<p class="fragment">services marketplace!!!</p>
+					</section>
+					<section><p>"App" value in tPCF</p>
+					<img src="ai-anatomy1.jpg"/>
+					</section>
+					<section><p>"App" ecosystem value in tPCF (highlights)</p>
+					<img src="ai-anatomy2.jpg"/>
+					</section>
+				</section>
+				<section>
+					<p>So... What's New though? :-) </p>
+				</section>
+				<section>
+				<section>
+					<p>How about shrinking (some of your) apps' memory overhead by 90%+?</p>
+					<img src="graalvm.png"/>
+				</section>
+				<section>
+					<p>..but that's too complicated for my build-system...</p>
+				</section>
+				<section>
+					<p>what if the 'platform' could non-disruptively attempt native image compilation from 
+						JIT compiled* apps already in the platform?</p>
+					</p>
+				</section>
+				<section>
+					<p>cf-java-optimizer.sh [appname]</p>
+					<p class="fragment">Downloads unstaged 'jar' back from tPCF</p>
+					<p class="fragment">Pushes it as new app, with native image cnb buildpack</p>
+					<p class="fragment">Resizes to 'tiny' footprint after staging</p>
+					<p class="fragment">Add new app to original app ingress route</p>
+				</section>
+			    </section>
+				<section>
+					<p>Demo Time.. finally :)</p>
+			    </section>
+				<section>
+				<section>
+					<p>How about tPCF image portability?</p>
+				</section>
+				<section>
+					<p>Did you know.. tPCF supports droplet-download / droplet-deploy?</p>
+					<p class="fragment">cf download-droplet [appname]</p>
+					<p class="fragment">cf push [appname] --droplet [droplet-file]</p>
+				</section>
+				<section>
+					<p>We can stage native images 'elsewhere' (iso-seg/foundation)</p>
+					<p class="fragment">native image 'objection #1' handled (noisey neighbor stagers in prod)</p>
+					<p class="fragment">Gives tPCF-at-the-edge a shot of adrenaline?</p>
+					<p class="fragment">small footprint.. registry, ingress, tls, vault, and marketplace embedded!</p>
+				</section>
+				</section>
+				<!-- <section>
+				<img src="tap-native2.png"/>	
+				</section> -->
+				<section>
+					<p>Additional tPCF material for best-in-class Java platform</p>
+					<p class="fragment">Gabry - experimental droplet-dockerfile generator</p>
+					<p class="fragment">Anthony Dahanne - tanzu lightning demo for CDS/AOT java buildpack</p>
+				</section>
+				<section>
+					<p>What else?</p>
+				</section>
+				<section>
+					<p>tPCF for GenAI</p>
+					<img src="genai.jpg"/>
+				</section>
+				<section>
+					<p>tPCF's embedded SpringCloudGateway for cert-based authorization
+					<img src="mtls-atz.jpg"/></p>
+					<p class="fragment">hidden superpower - SCG's unique container-2-container integration on backend</p>
+				</section>
+				<section>
+					<p>Streaming apps with multi-port TAS source adapters</p>
+					<img src="scdf.jpg"/>
+					<p class="fragment">hidden superpower - TAS can host apps with multiple listen ports including TCP ingress</p>
+				</section>
+				<section>
+					thanks!
+				</section>
+			</a>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/notes/notes.js"></script>
+		<script src="../plugin/markdown/markdown.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
